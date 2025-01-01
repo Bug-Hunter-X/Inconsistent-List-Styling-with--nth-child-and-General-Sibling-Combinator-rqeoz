@@ -1,0 +1,9 @@
+The following CSS code snippet intends to style a list element, but it will not render correctly due to an uncommon error involving the `:nth-child` pseudo-class and a sibling selector.
+
+```css
+li:nth-child(2n+1) ~ li {
+  background-color: yellow;
+}
+```
+
+This code attempts to target every odd list item and apply a yellow background. However, `~` (general sibling combinator) selects only siblings that appear *after* the selected element.  Therefore, it doesn't select every other item; it only selects siblings following an odd-numbered element.  This leads to inconsistent styling.
