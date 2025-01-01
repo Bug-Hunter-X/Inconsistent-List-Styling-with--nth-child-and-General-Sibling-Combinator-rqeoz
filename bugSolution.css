@@ -1,0 +1,8 @@
+The corrected CSS code uses `:nth-child(2n)` to directly target even list items, producing the intended alternating background colors:
+
+```css
+li:nth-child(2n) {
+  background-color: yellow;
+}
+```
+This accurately styles every other list item without the unexpected behavior caused by the general sibling combinator.
